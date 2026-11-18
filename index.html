@@ -160,6 +160,69 @@
     opacity: 0; background: rgba(20,20,20,.92); color: #fff; padding: 12px 16px; border-radius: 14px; font-size: 14px;
     transition: all .3s ease; z-index: 20; max-width: 90%; text-align: center; pointer-events: none; }
   .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+  /* новая главная */
+  .seg { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 4px; padding: 4px; border-radius: 14px; background: rgba(138,143,152,.16); margin-bottom: 6px; }
+  .seg button { height: 38px; border: none; border-radius: 10px; background: transparent; color: var(--hint); font-size: 14px; font-weight: 600; cursor: pointer; }
+  .seg button.on { background: var(--bg); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .period { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .arrow { width: 44px; height: 44px; border: none; background: none; color: var(--text); font-size: 26px; line-height: 1; cursor: pointer; }
+  .arrow:disabled { color: var(--line); cursor: default; }
+  .pl { text-align: center; }
+  .pl .t { font-size: 16px; font-weight: 600; }
+  .pl .s { font-size: 12px; color: var(--hint); }
+  .pl .s.prelim { color: #c27c0e; }
+  .banner { background: rgba(237,161,0,.14); color: var(--text); border-radius: 14px; padding: 11px 13px; font-size: 13px; line-height: 1.45; margin-bottom: 12px; }
+  .tap { display: block; width: 100%; border: none; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+  .row-between { display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 100%; }
+  .link { color: var(--accent); font-size: 14px; font-weight: 500; }
+  .meta.split { justify-content: space-between; margin-top: 12px; padding-top: 12px; border-top: 0.5px solid var(--line); }
+  .bars { display: grid; gap: 4px; align-items: end; }
+  .bcol { border: none; background: none; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer; font: inherit; color: inherit; min-width: 0; }
+  .bv { font-size: 10px; color: var(--hint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .bv.on { color: var(--text); font-weight: 700; }
+  .bv.red { color: var(--red); }
+  .bwrap { height: 88px; width: 100%; display: flex; align-items: flex-end; justify-content: center; }
+  .nwrap { height: 16px; width: 100%; display: flex; justify-content: center; }
+  .cb { display: block; width: 70%; max-width: 26px; border-radius: 6px 6px 2px 2px; background-color: rgba(42,120,214,.35); }
+  .cb.sel { background-color: var(--blue); }
+  .cb.neg { background-color: var(--red); border-radius: 2px 2px 6px 6px; }
+  .cb.pre { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,.55) 0 3px, transparent 3px 7px); }
+  .base { height: 1px; width: 100%; background: var(--line); }
+  .bl { font-size: 11px; color: var(--hint); }
+  .bl.on { color: var(--text); font-weight: 700; }
+  .tile { border: none; text-align: left; font: inherit; color: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 4px; min-height: 128px; }
+  .tile .tt { color: var(--hint); font-size: 14px; }
+  .tile .chev { color: var(--hint); }
+  .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; }
+  .badge i { width: 8px; height: 8px; border-radius: 4px; display: inline-block; }
+  .badge.b-ok { color: #12935f; } .badge.b-ok i { background: var(--green); }
+  .badge.b-warn { color: #c27c0e; } .badge.b-warn i { background: var(--yellow); }
+  .badge.b-risk { color: var(--red); } .badge.b-risk i { background: var(--red); }
+  .section-title { display: flex; justify-content: space-between; align-items: baseline; margin: 22px 2px 10px; font-size: 19px; font-weight: 700; }
+  .section-title small { font-size: 13px; font-weight: 400; color: var(--hint); }
+  .news { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; margin-bottom: 10px; }
+  .news .nt { font-weight: 600; line-height: 1.35; }
+  .news .nx { font-size: 13px; color: var(--hint); margin-top: 2px; line-height: 1.4; }
+  .ic { width: 32px; height: 32px; border-radius: 10px; flex: none; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; }
+  .ic.i-ok { background: rgba(27,175,122,.15); color: #12935f; }
+  .ic.i-warn { background: rgba(237,161,0,.17); color: #c27c0e; }
+  .ic.i-risk { background: rgba(227,73,72,.14); color: var(--red); }
+  .ic.i-info { background: rgba(42,120,214,.14); color: var(--blue); }
+  .tips { padding: 4px 16px; }
+  .tipr { display: flex; gap: 12px; align-items: flex-start; padding: 13px 0; border-top: 0.5px solid var(--line); }
+  .tipr:first-child { border-top: none; }
+  .tipr .tb { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; font-size: 14px; line-height: 1.45; }
+  .num-badge { width: 26px; height: 26px; border-radius: 13px; flex: none; background: rgba(42,120,214,.14); color: var(--blue); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .line { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 0; border-top: 0.5px solid var(--line); font-size: 15px; }
+  .line:first-child { border-top: none; padding-top: 2px; }
+  .line:last-child { padding-bottom: 2px; }
+  .line span:first-child { display: flex; flex-direction: column; }
+  .line small { font-size: 12px; color: var(--hint); }
+  .line span:last-child { font-weight: 600; white-space: nowrap; }
+  .line.bold { font-weight: 700; }
+  .line.bold span:last-child { font-weight: 700; }
+  .tip-text { color: var(--hint); font-size: 13px; text-align: center; padding: 4px 12px 12px; line-height: 1.45; }
 </style>
 </head>
 <body>
@@ -170,7 +233,7 @@
   <button class="tab active" data-tab="home"><span class="ic">📊</span>Главная</button>
   <button class="tab" data-tab="clients"><span class="ic">👥</span>Клиенты</button>
   <button class="tab" data-tab="money"><span class="ic">🏦</span>Деньги</button>
-  <button class="tab" data-tab="payroll"><span class="ic">💼</span>Зарплата</button>
+  <button class="tab" data-tab="reports"><span class="ic">📄</span>Отчёты</button>
 </nav>
 
 <div class="backdrop" id="backdrop"></div>
@@ -185,7 +248,7 @@
   if (tg) { tg.ready(); tg.expand(); }
   const isDark = tg ? tg.colorScheme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
 
-  const S = { tab: 'home', homePeriod: 'ty', payPeriod: 'lm', client: null, clientFilter: 'all', search: '', sheet: false };
+  const S = { tab: 'home', mode: 'month', offset: { month: 0, quarter: 0, year: 0 }, payPeriod: 'lm', client: null, clientFilter: 'all', search: '', sheet: false, payroll: false };
   const memo = {};
   const charts = {};
   const screen = document.getElementById('screen');
@@ -284,112 +347,196 @@
   const tickColor = '#8a8f98', gridColor = isDark ? 'rgba(255,255,255,.08)' : 'rgba(0,0,0,.06)';
 
   // ================= ГЛАВНАЯ =================
+  const MODES = [['month', 'Месяц'], ['quarter', 'Квартал'], ['year', 'Год']];
+  const STATUS = {
+    ok: { text: 'Норма', cls: 'b-ok' },
+    warn: { text: 'Внимание', cls: 'b-warn' },
+    risk: { text: 'Риск', cls: 'b-risk' }
+  };
+  const NEWS_ICON = { bad: ['i-risk', '!'], good: ['i-ok', '↑'], warn: ['i-warn', '!'], info: ['i-info', '₸'] };
+  let home = null;
+
+  function homeShell(d) {
+    const p = d ? d.period : { label: '…', sub: 'загрузка из 1С', canPrev: false, canNext: false };
+    return header('Ваш бизнес', d ? 'обновлено ' + esc(d.updated) : 'загрузка из 1С…') +
+      '<div class="seg">' + MODES.map(m => '<button class="' + (m[0] === S.mode ? 'on' : '') + '" data-mode="' + m[0] + '">' + m[1] + '</button>').join('') + '</div>' +
+      '<div class="period">' +
+        '<button class="arrow" data-step="-1" aria-label="Предыдущий период"' + (p.canPrev ? '' : ' disabled') + '>‹</button>' +
+        '<div class="pl"><div class="t">' + esc(p.label) + '</div><div class="s' + (p.prelim ? ' prelim' : '') + '">' + esc(p.sub) + '</div></div>' +
+        '<button class="arrow" data-step="1" aria-label="Следующий период"' + (p.canNext ? '' : ' disabled') + '>›</button>' +
+      '</div>';
+  }
+
   async function renderHome(refresh) {
-    const shell = header('Панель руководителя', '<span id="upd">Загрузка из 1С…</span>') + chips(S.homePeriod, 'data-hp');
-    screen.innerHTML = shell + skel(130, 90, 90, 280, 200);
+    screen.innerHTML = homeShell(null) + skel(150, 190, 140, 140, 220);
     let d;
-    try { d = await api({ api: 'dashboard', period: S.homePeriod }, { refresh }); }
-    catch (e) { screen.innerHTML = shell + errorState(e); return; }
+    try { d = await api({ api: 'home', mode: S.mode, offset: S.offset[S.mode] }, { refresh }); }
+    catch (e) { screen.innerHTML = homeShell(null) + errorState(e); return; }
     if (S.tab !== 'home') return;
-    const k = d.kpi;
-    const structTotal = d.structure.reduce((s, x) => s + x.sum, 0);
-    const f = d.forecast;
+    home = d;
+    const k = d.kpi, p = d.period;
 
-    screen.innerHTML = header('Панель руководителя', esc(d.period.label) + ' · обновлено ' + esc(d.updated)) + chips(S.homePeriod, 'data-hp') +
-      (d.monthOpen ? '<div class="warn">⚠️ Месяц ещё не закрыт: часть расходов бухгалтер вносит в конце месяца.</div>' : '') +
+    let deltaPill;
+    if (k.netPct === null) deltaPill = '<span class="pill flat">' + (p.prelim ? 'период ещё идёт' : 'нет сравнения') + '</span>';
+    else deltaPill = '<span class="pill ' + (k.netPct >= 0 ? 'up' : 'down') + '">' + (k.netPct >= 0 ? '▲ ' : '▼ ') + Math.abs(k.netPct) + '%</span><span>' + esc(p.prevText) + '</span>';
 
-      '<div class="card hero fade-in"><div class="label">Чистая прибыль</div>' +
-        '<div class="big num" style="color:' + (k.net >= 0 ? 'var(--text)' : 'var(--red)') + '">' + fmt(k.net) + '</div>' +
-        '<div class="meta">' + delta(k.net, k.netPrev) + '<span>к периоду ' + esc(d.prevLabel) + '</span></div>' +
-        '<div class="meta" style="margin-top:10px"><span>Выручка <b class="num">' + short(k.revenue) + '</b></span><span>Маржа <b>' + k.margin + '%</b></span></div></div>' +
+    const maxAbs = Math.max.apply(null, d.bars.map(b => Math.abs(b.net)).concat([1]));
+    const barsHtml = d.bars.map(b => {
+      const h = b.net > 0 ? Math.max(4, Math.round(b.net / maxAbs * 86)) : 0;
+      const nh = b.net < 0 ? Math.max(4, Math.min(16, Math.round(Math.abs(b.net) / maxAbs * 86))) : 0;
+      const cls = (b.net < 0 ? 'neg' : b.sel ? 'sel' : '') + (b.prelim ? ' pre' : '');
+      return '<button class="bcol" data-month="' + b.y + ',' + b.m + '" aria-label="' + esc(b.label) + ': ' + esc(short(b.net)) + '">' +
+        '<span class="bv' + (b.sel ? ' on' : '') + (b.net < 0 ? ' red' : '') + '">' + mlnShort(b.net) + '</span>' +
+        '<span class="bwrap"><span class="cb ' + cls + '" style="height:' + h + 'px"></span></span>' +
+        '<span class="base"></span><span class="nwrap"><span class="cb neg' + (b.prelim ? ' pre' : '') + '" style="height:' + nh + 'px"></span></span>' +
+        '<span class="bl' + (b.sel ? ' on' : '') + '">' + esc(b.label) + '</span></button>';
+    }).join('');
 
-      (f ? '<div class="card forecast fade-in"><div class="meta">🔮 Прогноз на ' + f.year + ' год</div>' +
-        '<div class="big num" style="font-weight:700;margin:4px 0">' + short(f.net) + ' прибыли</div>' +
-        '<div class="meta">≈ ' + short(f.revenue) + ' выручки · по среднему темпу за ' + f.basedOn + ' мес. (' + short(f.avgNet) + ' в месяц)</div></div>' : '') +
+    screen.innerHTML = homeShell(d) +
+      (p.prelim ? '<div class="banner fade-in">⏳ ' + (p.mode === 'year'
+        ? 'Год ещё не закончился: показаны данные с января по сегодня. Цифры текущего месяца предварительные.'
+        : 'Период ещё не закрыт: часть расходов (зарплату, амортизацию) бухгалтер вносит в конце месяца. Цифры предварительные.') + '</div>' : '') +
 
-      '<div class="grid fade-in">' +
-        kpi('Выручка', short(k.revenue), delta(k.revenue, k.revenuePrev), 'var(--blue)') +
-        kpi('Расходы', short(k.expenses), delta(k.expenses, k.expensesPrev, true), 'var(--orange)') +
-        kpi('На счетах', short(k.cash), '<div class="small">сейчас</div>', 'var(--violet)', 'data-go="money"') +
-        kpi('Нам должны', short(k.receivable), '<div class="small">' + d.debtorsCount + ' клиент(ов) ›</div>', 'var(--red)', 'data-go="money"') +
-      '</div>' +
+      '<button class="card hero tap fade-in" data-sheet="profit">' +
+        '<div class="label row-between"><span>Чистая прибыль</span><span class="link">Из чего ›</span></div>' +
+        '<div class="big num" style="color:' + (k.net < 0 ? 'var(--red)' : 'var(--text)') + '">' + fmt(k.net) + '</div>' +
+        '<div class="meta">' + deltaPill + '</div>' +
+        '<div class="meta split"><span>Выручка <b class="num">' + short(k.revenue) + '</b></span><span>Рентабельность <b>' + k.margin + '%</b></span></div>' +
+      '</button>' +
 
-      '<div class="card fade-in"><h2>Динамика за 12 месяцев <small>млн ₸</small></h2>' +
-        '<div class="legend"><span><i class="dot" style="background:var(--blue)"></i>Выручка</span><span><i class="dot" style="background:var(--orange)"></i>Расходы</span><span><i class="dot" style="background:var(--green)"></i>Прибыль</span></div>' +
-        '<div class="chart-wrap"><canvas id="mainChart"></canvas></div><div class="tip">👆 Нажмите на месяц, чтобы увидеть детали</div></div>' +
+      '<div class="card fade-in"><h2>Прибыль по месяцам <small>нажмите на месяц</small></h2>' +
+        '<div class="bars" style="grid-template-columns:repeat(' + d.bars.length + ',minmax(0,1fr))">' + barsHtml + '</div></div>' +
 
-      '<div class="card fade-in"><h2>Куда уходят деньги <small>' + short(structTotal) + '</small></h2>' + bars(d.structure, structTotal, i => COLORS[i % COLORS.length]) + '</div>' +
+      '<div class="grid fade-in">' + d.tiles.map(t =>
+        '<button class="kpi tile" data-sheet="' + t.kind + '">' +
+          '<span class="row-between"><span class="badge ' + STATUS[t.status].cls + '"><i></i>' + STATUS[t.status].text + '</span><span class="chev">›</span></span>' +
+          '<span class="tt">' + esc(t.title) + '</span><span class="value num">' + esc(t.value) + '</span><span class="small">' + esc(t.note) + '</span>' +
+        '</button>').join('') + '</div>' +
 
-      '<div class="card fade-in"><h2>Топ клиентов <a data-go="clients">Все ›</a></h2>' +
-        bars(d.clients.map(c => ({ key: c.key, name: c.name, sum: c.sum })), k.revenue, () => 'var(--blue)', clientAttr) + '</div>' +
+      '<div class="section-title fade-in"><span>Что важно</span><small>' + esc(p.label) + '</small></div>' +
+      (d.news.length ? d.news.map(n =>
+        '<div class="card news fade-in"><span class="ic ' + NEWS_ICON[n.kind][0] + '">' + NEWS_ICON[n.kind][1] + '</span>' +
+        '<div><div class="nt">' + esc(n.title) + '</div><div class="nx">' + esc(n.text) + '</div></div></div>').join('')
+        : '<div class="card news fade-in"><span class="ic i-ok">✓</span><div><div class="nt">Всё спокойно</div><div class="nx">За период не было ничего необычного</div></div></div>') +
+
+      (d.tips.length ? '<div class="section-title fade-in"><span>Советы</span></div>' +
+        '<div class="card tips fade-in">' + d.tips.map((t, i) =>
+          '<div class="tipr"><span class="num-badge">' + (i + 1) + '</span><div class="tb"><div>' + esc(t.text) + '</div>' +
+          (t.action ? '<button class="btn-small" ' + (t.act.type === 'act' ? 'data-actc="' + t.act.client + '" data-ap="ty"' : 'data-sheet="' + t.act.kind + '"') + '>' + esc(t.action) + '</button>' : '') +
+          '</div></div>').join('') + '</div>' : '') +
 
       '<div class="actions fade-in">' +
         '<button class="btn" data-send="report">📊 Отчёт в чат</button>' +
         '<button class="btn secondary" data-send="excel">📥 Excel в чат</button>' +
       '</div>';
-
-    drawMain(d.series);
   }
 
-  function drawMain(s) {
-    const el = document.getElementById('mainChart');
-    if (!el || !window.Chart) return;
-    const mln = a => a.map(v => Math.round(v / 1e5) / 10);
-    charts.main = new Chart(el, {
-      data: {
-        labels: s.labels,
-        datasets: [
-          { type: 'bar', label: 'Выручка', data: mln(s.revenue), backgroundColor: '#2a78d6', borderRadius: 4, maxBarThickness: 10, order: 2 },
-          { type: 'bar', label: 'Расходы', data: mln(s.expenses), backgroundColor: '#eb6834', borderRadius: 4, maxBarThickness: 10, order: 2 },
-          { type: 'line', label: 'Прибыль', data: mln(s.profit), borderColor: '#1baf7a', backgroundColor: '#1baf7a', borderWidth: 2.5, pointRadius: 3, borderDash: [6, 4], tension: .3, order: 1 }
-        ]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-        onClick: (evt, els, chart) => {
-          const hit = chart.getElementsAtEventForMode(evt, 'index', { intersect: false }, true);
-          if (hit.length) { const ym = s.ym[hit[0].index]; openMonth(ym[0], ym[1]); }
-        },
-        plugins: { legend: { display: false },
-          tooltip: { callbacks: { label: c => ' ' + c.dataset.label + ': ' + c.parsed.y.toFixed(1).replace('.', ',') + ' млн ₸' } } },
-        scales: {
-          x: { grid: { display: false }, ticks: { color: tickColor, font: { size: 10 }, maxRotation: 0, autoSkip: false,
-               callback: function (v) { return this.getLabelForValue(v).split(' ')[0]; } } },
-          y: { grid: { color: gridColor }, border: { display: false }, ticks: { color: tickColor, font: { size: 10 } } }
-        }
-      }
-    });
+  function mlnShort(n) {
+    const a = Math.abs(n), s = n < 0 ? '−' : '';
+    if (a >= 1e6) return s + (a / 1e6).toFixed(1).replace('.', ',');
+    if (a >= 1e3) return s + Math.round(a / 1e3) + 'к';
+    return s + Math.round(a);
   }
 
-  // ================= ДЕТАЛИ МЕСЯЦА (шторка) =================
-  async function openMonth(y, m) {
-    haptic();
+  // ================= ОКНА С ПОДРОБНОСТЯМИ =================
+  function openSheet(html) {
     const sheet = document.getElementById('sheet');
     S.sheet = true; updateBack();
     document.getElementById('backdrop').classList.add('show');
-    sheet.innerHTML = '<div class="grabber"></div>' + skel(120, 90, 180);
+    sheet.innerHTML = '<div class="grabber"></div>' + html;
+    sheet.scrollTop = 0;
     sheet.classList.add('show');
+  }
+  function sheetHead(title, sub) {
+    return '<div class="top"><div style="min-width:0"><h1>' + esc(title) + '</h1>' + (sub ? '<div class="sub">' + sub + '</div>' : '') + '</div>' +
+      '<button class="icon-btn" data-close aria-label="Закрыть">✕</button></div>';
+  }
+  function lines(rows) {
+    return '<div class="card">' + rows.map(r =>
+      '<div class="line' + (r.bold ? ' bold' : '') + '"><span>' + esc(r.name) + (r.note ? '<small>' + esc(r.note) + '</small>' : '') + '</span>' +
+      '<span class="num" style="' + (r.color ? 'color:' + r.color : '') + '">' + r.value + '</span></div>').join('') + '</div>';
+  }
+
+  function showSheet(kind) {
+    if (!home) return;
+    haptic();
+    const d = home, k = d.kpi;
+    if (kind === 'profit') {
+      const rows = [{ name: 'Выручка', value: fmt(k.revenue) },
+        { name: 'Себестоимость', note: 'зарплата и налоги сотрудников и др.', value: '−' + fmt(k.cost) },
+        { name: 'Расходы периода', note: 'аренда, услуги, банк и др.', value: '−' + fmt(k.opex) }];
+      if (k.otherIncome) rows.push({ name: 'Прочие доходы', value: '+' + fmt(k.otherIncome) });
+      if (k.tax) rows.push({ name: 'КПН', value: '−' + fmt(k.tax) });
+      rows.push({ name: 'Чистая прибыль', value: fmt(k.net), bold: true, color: k.net < 0 ? 'var(--red)' : 'var(--green)' });
+      openSheet(sheetHead('Из чего прибыль', esc(d.period.label)) + lines(rows) +
+        '<div class="card"><h2>Куда уходят деньги</h2>' + bars(d.structure, d.structure.reduce((s, x) => s + x.sum, 0), i => COLORS[i % COLORS.length]) + '</div>');
+    } else if (kind === 'cash') {
+      const c = d.cash;
+      openSheet(sheetHead('Деньги на счетах', 'остаток на сегодня') +
+        lines(c.accounts.map(a => ({ name: a.name, value: short(a.sum) })).concat([{ name: 'Всего', value: fmt(c.total), bold: true }])) +
+        (c.cover !== null ? lines([{ name: 'Расходы в среднем за месяц', note: 'по последним 3 закрытым месяцам', value: short(c.avgExp) },
+          { name: 'Хватит на', value: String(c.cover).replace('.', ',') + ' мес.', bold: true, color: c.cover >= 2 ? 'var(--green)' : c.cover >= 1 ? 'var(--yellow)' : 'var(--red)' }]) : '') +
+        '<div class="actions one"><button class="btn secondary" data-go="money">Все счета и долги ›</button></div>');
+    } else if (kind === 'debts') {
+      const list = d.debts.list;
+      openSheet(sheetHead('Долги клиентов', 'на сегодня · ' + list.length + ' клиент(ов) · ' + short(d.debts.total)) +
+        '<div class="card">' + (list.length ? list.map(x =>
+          '<div class="row">' + avatar(x.name) + '<div class="info click" data-client="' + x.key + '"><div class="n">' + esc(x.name) + '</div>' +
+          '<div class="s red num">' + fmt(x.sum) + '</div></div><button class="btn-small" data-actc="' + x.key + '" data-ap="ty">📑 Акт</button></div>').join('')
+          : '<div class="empty">Никто не должен 🎉</div>') + '</div>');
+    } else if (kind === 'expenses') {
+      const total = d.structure.reduce((s, x) => s + x.sum, 0);
+      openSheet(sheetHead('Куда уходят деньги', esc(d.period.label) + ' · ' + short(total)) +
+        '<div class="card">' + bars(d.structure, total, i => COLORS[i % COLORS.length]) + '</div>' +
+        '<div class="actions one"><button class="btn secondary" data-send="excel">📥 Расшифровка в Excel</button></div>');
+    }
+  }
+
+  // детали месяца (тап по столбику графика)
+  async function openMonth(y, m) {
+    haptic();
+    openSheet(skel(120, 90, 180));
     let d;
     try { d = await api({ api: 'month', y: y, m: m }); }
-    catch (e) { sheet.innerHTML = '<div class="grabber"></div>' + errorState(e); return; }
+    catch (e) { openSheet(errorState(e)); return; }
     const k = d.kpi;
     const total = d.structure.reduce((s, x) => s + x.sum, 0);
-    sheet.innerHTML = '<div class="grabber"></div>' +
-      '<div class="top"><div><h1>' + esc(d.label) + '</h1><div class="sub">сравнение с ' + esc(d.prevLabel) + '</div></div>' +
-      '<button class="icon-btn" data-close aria-label="Закрыть">✕</button></div>' +
-      (d.open ? '<div class="warn">⚠️ Месяц ещё не закрыт — цифры будут уточняться.</div>' : '') +
+    openSheet(sheetHead(d.label, d.open ? 'месяц не закрыт · предварительно' : 'сравнение с ' + esc(d.prevLabel)) +
       '<div class="card hero"><div class="label">Чистая прибыль</div><div class="big num" style="color:' + (k.net >= 0 ? 'var(--text)' : 'var(--red)') + '">' + fmt(k.net) + '</div>' +
-        '<div class="meta">' + delta(k.net, k.netPrev) + '<span>Маржа <b>' + k.margin + '%</b></span></div></div>' +
-      '<div class="grid">' + kpi('Выручка', short(k.revenue), delta(k.revenue, k.revenuePrev), 'var(--blue)') +
-        kpi('Расходы', short(k.expenses), delta(k.expenses, k.expensesPrev, true), 'var(--orange)') + '</div>' +
+        '<div class="meta">' + (d.open ? '' : delta(k.net, k.netPrev)) + '<span>Рентабельность <b>' + (k.revenue ? Math.round(k.net / k.revenue * 100) : 0) + '%</b></span></div></div>' +
+      '<div class="grid">' + kpi('Выручка', short(k.revenue), d.open ? '' : delta(k.revenue, k.revenuePrev), 'var(--blue)') +
+        kpi('Расходы', short(k.expenses), d.open ? '' : delta(k.expenses, k.expensesPrev, true), 'var(--orange)') + '</div>' +
       '<div class="card"><h2>Откуда пришли деньги</h2>' + bars(d.clients, k.revenue, () => 'var(--blue)', clientAttr) + '</div>' +
-      '<div class="card"><h2>Куда ушли деньги <small>' + short(total) + '</small></h2>' + bars(d.structure, total, i => COLORS[i % COLORS.length]) + '</div>';
+      '<div class="card"><h2>Куда ушли деньги <small>' + short(total) + '</small></h2>' + bars(d.structure, total, i => COLORS[i % COLORS.length]) + '</div>');
   }
   function closeSheet() {
     S.sheet = false; updateBack();
     document.getElementById('sheet').classList.remove('show');
     document.getElementById('backdrop').classList.remove('show');
   }
+
+  // ================= ОТЧЁТЫ =================
+  function renderReports() {
+    if (S.payroll) return renderPayroll();
+    const label = home ? home.period.label : 'выбранный период';
+    const item = (icon, title, sub, attrs) =>
+      '<div class="row"><div class="avatar" style="background:rgba(42,120,214,.12);color:var(--blue)">' + icon + '</div>' +
+      '<div class="info"><div class="n">' + title + '</div><div class="s">' + sub + '</div></div>' + attrs + '</div>';
+    screen.innerHTML = header('Отчёты', 'файлы приходят в чат с ботом', { refresh: false }) +
+      '<div class="card fade-in"><h2>Зарплата</h2>' +
+        '<div class="row click" data-payroll>' + '<div class="avatar" style="background:rgba(98,80,214,.13);color:var(--violet)">👥</div>' +
+        '<div class="info"><div class="n">Начислено и выплачено</div><div class="s">по сотрудникам и месяцам</div></div><span class="chev">›</span></div></div>' +
+      '<div class="card fade-in"><h2>Excel за период <small>' + esc(label) + '</small></h2>' +
+        item('📊', 'Прибыль и расходы', 'с расшифровкой по статьям', '<button class="btn-small" data-rx="profit">📥 В чат</button>') +
+        item('💰', 'Доходы по клиентам', 'выручка по клиентам и договорам', '<button class="btn-small" data-rx="income">📥 В чат</button>') +
+        item('👥', 'Зарплата', 'по сотрудникам и месяцам', '<button class="btn-small" data-rx="payroll">📥 В чат</button>') +
+      '</div>' +
+      '<div class="card fade-in"><h2>На сегодня</h2>' +
+        item('🏦', 'Деньги и долги', 'остатки, должники, поставщики', '<button class="btn-small" data-rx="money">📥 В чат</button>') +
+      '</div>' +
+      '<div class="tip-text fade-in">Период для отчётов — тот, что выбран на главной. Акт сверки — в карточке клиента или в списке должников.</div>';
+  }
+
 
   // ================= КЛИЕНТЫ =================
   async function renderClients(refresh) {
@@ -497,15 +644,15 @@
 
   // ================= ЗАРПЛАТА =================
   async function renderPayroll(refresh) {
-    const shell = header('Зарплата', 'начислено и выплачено') + chips(S.payPeriod, 'data-pp');
+    const shell = header('Зарплата', 'начислено и выплачено', { back: 'Отчёты' }) + chips(S.payPeriod, 'data-pp');
     screen.innerHTML = shell + skel(90, 160, 160);
     let d;
     try { d = await api({ api: 'payroll', period: S.payPeriod }, { refresh }); }
     catch (e) { screen.innerHTML = shell + errorState(e); return; }
-    if (S.tab !== 'payroll') return;
+    if (S.tab !== 'reports' || !S.payroll) return;
     const t = d.total;
 
-    screen.innerHTML = header('Зарплата', esc(d.label) + ' · сотрудников: ' + d.headcount) + chips(S.payPeriod, 'data-pp') +
+    screen.innerHTML = header('Зарплата', esc(d.label) + ' · сотрудников: ' + d.headcount, { back: 'Отчёты' }) + chips(S.payPeriod, 'data-pp') +
       '<div class="grid three fade-in">' +
         kpi('Начислено', short(t.accrued), '', 'var(--blue)') +
         kpi('На руки', short(t.net), '<div class="small">удержано ' + short(t.withheld) + '</div>', 'var(--green)') +
@@ -524,6 +671,7 @@
       '<div class="actions one fade-in"><button class="btn" data-pxls>📥 Excel в чат</button></div>';
   }
 
+
   // ================= навигация =================
   function render(refresh) {
     destroyCharts();
@@ -537,39 +685,46 @@
     if (S.tab === 'home') renderHome(refresh);
     else if (S.tab === 'clients') renderClients(refresh);
     else if (S.tab === 'money') renderMoney(refresh);
-    else renderPayroll(refresh);
+    else renderReports(refresh);
   }
 
-  function goTab(tab) { closeSheet(); S.tab = tab; if (tab !== 'clients') S.client = null; render(); }
+  function goTab(tab) { closeSheet(); S.tab = tab; S.client = null; S.payroll = false; render(); }
   function openClient(key) { closeSheet(); haptic(); S.tab = 'clients'; S.client = key; render(); }
   function goBack() {
     if (S.sheet) return closeSheet();
-    if (S.client) { S.client = null; render(); }
+    if (S.client) { S.client = null; render(); return; }
+    if (S.payroll) { S.payroll = false; render(); }
   }
   function updateBack() {
     if (!tg || !tg.BackButton) return;
-    if (S.sheet || S.client) tg.BackButton.show(); else tg.BackButton.hide();
+    if (S.sheet || S.client || S.payroll) tg.BackButton.show(); else tg.BackButton.hide();
   }
   if (tg && tg.BackButton) tg.BackButton.onClick(goBack);
 
   document.querySelector('.tabbar').addEventListener('click', e => {
     const b = e.target.closest('.tab'); if (!b) return;
     haptic();
-    if (b.dataset.tab === S.tab && S.client) { S.client = null; render(); return; }
+    if (b.dataset.tab === S.tab && (S.client || S.payroll)) { S.client = null; S.payroll = false; render(); return; }
     goTab(b.dataset.tab);
   });
   document.getElementById('backdrop').addEventListener('click', closeSheet);
 
-  // все клики внутри экрана и шторки
+  // параметры периода главной — для отчётов в чат
+  const homeReq = () => ({ mode: S.mode, offset: S.offset[S.mode] });
+
   function onClick(e) {
-    const t = e.target.closest('[data-hp],[data-pp],[data-cf],[data-client],[data-go],[data-back],[data-refresh],[data-close],[data-send],[data-actc],[data-cxls],[data-mxls],[data-pxls],[data-toggle]');
-    if (!t) return;
+    const t = e.target.closest('[data-mode],[data-step],[data-month],[data-sheet],[data-pp],[data-cf],[data-client],[data-go],[data-back],[data-refresh],[data-close],[data-send],[data-actc],[data-cxls],[data-mxls],[data-pxls],[data-toggle],[data-payroll],[data-rx]');
+    if (!t || t.disabled) return;
     const ds = t.dataset;
-    if (ds.hp) { if (ds.hp !== S.homePeriod) { haptic(); S.homePeriod = ds.hp; render(); } return; }
+    if (ds.mode) { if (ds.mode !== S.mode) { haptic(); S.mode = ds.mode; render(); } return; }
+    if (ds.step) { haptic(); S.offset[S.mode] += Number(ds.step); render(); return; }
+    if (ds.month) { const a = ds.month.split(','); return openMonth(a[0], a[1]); }
+    if (ds.sheet) return showSheet(ds.sheet);
     if (ds.pp) { if (ds.pp !== S.payPeriod) { haptic(); S.payPeriod = ds.pp; render(); } return; }
     if (ds.cf) { haptic(); S.clientFilter = ds.cf; render(); return; }
     if (ds.client) return openClient(ds.client);
     if (ds.go) { haptic(); return goTab(ds.go); }
+    if ('payroll' in ds) { haptic(); S.payroll = true; return render(); }
     if ('back' in ds) return goBack();
     if ('close' in ds) return closeSheet();
     if ('refresh' in ds) {
@@ -578,8 +733,9 @@
       return render(true);
     }
     if ('toggle' in ds) { haptic(); t.parentElement.classList.toggle('open'); return; }
-    if (ds.send === 'report') return action(t, { api: 'report', type: 'profit', period: S.homePeriod }, '✅ Отчёт о прибыли отправлен в чат');
-    if (ds.send === 'excel') return action(t, { api: 'excel', type: 'profit', period: S.homePeriod }, '📥 Excel отправлен в чат');
+    if (ds.send === 'report') return action(t, Object.assign({ api: 'report', type: 'profit' }, homeReq()), '✅ Отчёт о прибыли отправлен в чат');
+    if (ds.send === 'excel') return action(t, Object.assign({ api: 'excel', type: 'profit' }, homeReq()), '📥 Excel отправлен в чат');
+    if (ds.rx) return action(t, ds.rx === 'money' ? { api: 'excel', type: 'money' } : Object.assign({ api: 'excel', type: ds.rx }, homeReq()), '📥 Excel отправлен в чат');
     if (ds.actc) return action(t, { api: 'act', client: ds.actc, period: ds.ap || 'ty' }, '📑 Акт сверки отправлен в чат');
     if (ds.cxls) return action(t, { api: 'excel', type: 'contracts', client: ds.cxls }, '📥 Договоры в Excel отправлены в чат');
     if ('mxls' in ds) return action(t, { api: 'excel', type: 'money' }, '📥 Excel отправлен в чат');
